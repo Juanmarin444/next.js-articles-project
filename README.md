@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Article Project
 
-## Getting Started
+## Next.js
 
-First, run the development server:
+- Next.js is a React frontend development web framework created by Vercel.
+- It enables functionality such as server-side rendering and static site generation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Server-side rendering
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js allows the first page load to be rendered by the server
+- It is great for SEO and performance
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Benefits
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Super easy page routing
+- API routes
+- Out of the box typescript and sass
+- Static site generation using the script (next export)
+- Easy deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Generating a new project
 
-## Learn More
+- You can generate new projects by using ( npx create-next-app name-of-your-app )
+- Things like web-pack and babel are still being used in the background
 
-To learn more about Next.js, take a look at the following resources:
+## Public folder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Everything in the public folder is accessible from the browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Styles folder
 
-## Deploy on Vercel
+- Global CSS file is global to the entire project
+- You can also have specific CSS files for each of your components or pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Components folder
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Creating a components folder will be to store components that are not intended to be pages
+- Components like buttons, navbars or headers
+- It's also convention for all pages to be lowercase and components to be uppercase
+
+## Custom Documents
+
+- A custom `Document` is commonly used to augment your application's `<html>` and `<body>` tags.
+- This is necessary because Next.js pages skip the definition of the surrounding document's markup.
+
+## Data Fetching
+
+- Next.js provides **special functions** we can use to **fetch data** and **pass it into** our
+  page as props
+- The functions can be added above or below your components
+- There are three different methods you can use to fetch data
+  - getStaticProps: Allows to fetch at build time
+  - getServerSideProps: Fetches data on every request (It can be a little slower)
+  - getStaticPaths: Dynamically generates paths based on the data being fetched
